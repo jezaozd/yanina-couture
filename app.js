@@ -57,6 +57,26 @@
       ctx.fillStyle = 'rgba(92,114,255,.95)';
       ctx.beginPath(); ctx.arc(p[0], p[1], r, 0, 6.2832); ctx.fill();
     },
+    // прокол на просвет: светлая сердцевина, тёмный край
+    pin: function (ctx, p, s) {
+      var r = Math.max(1.2, 1.45 * s);
+      ctx.fillStyle = 'rgba(19,20,25,.55)';
+      ctx.beginPath(); ctx.arc(p[0], p[1] + .4, r * 1.25, 0, 6.2832); ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,.95)';
+      ctx.beginPath(); ctx.arc(p[0] - .2, p[1] - .2, r * .62, 0, 6.2832); ctx.fill();
+    },
+    // порошок на бархате: россыпь мягких крупинок вокруг прокола
+    grain: function (ctx, p, s) {
+      var n = 5, r0 = 2.6 * s;
+      for (var i = 0; i < n; i++) {
+        var a = Math.random() * 6.2832, d = Math.random() * r0;
+        var rr = (.45 + Math.random() * .9) * s;
+        ctx.fillStyle = 'rgba(120,138,255,' + (.35 + Math.random() * .5).toFixed(2) + ')';
+        ctx.beginPath(); ctx.arc(p[0] + Math.cos(a) * d, p[1] + Math.sin(a) * d, rr, 0, 6.2832); ctx.fill();
+      }
+      ctx.fillStyle = 'rgba(92,114,255,.1)';
+      ctx.beginPath(); ctx.arc(p[0], p[1], r0 * 1.3, 0, 6.2832); ctx.fill();
+    },
     // порошок на фото лифа (смешивается умножением)
     dust: function (ctx, p, s) {
       var r = Math.max(1.1, 1.6 * s);
@@ -91,11 +111,17 @@
   /* ---------- 1. калька над лифом ---------- */
   var hero = $('.hero'), kalka = $('#kalka'), holes = $('#holes'), powder = $('#powder');
   var phases = $$('.phase li'), hbar = $('#hbar');
-  var finishPrick = null, dustReady = false, lastPhase = 0;
+  var finishPrick = null, dustReady = false, lastPhase = -1, pricked = false;
+  var narrow = window.matchMedia('(max-width:900px)');
+  var cap = $('.sheet-cap'), capHTML = cap ? cap.innerHTML : '';
 
   function drawHero(animate) {
     if (!DOTS.blossom || !holes) return;
-    finishPrick = prick(holes, DOTS.blossom, 'holes', .5, .4, animate ? 2600 : 0, null);
+    finishPrick = prick(holes, DOTS.blossom, 'holes', .5, .4, animate ? 2600 : 0, function () {
+      pricked = true;
+      // на телефоне калька чуть приподнимается сама, чтобы была видна вышивка
+      if (narrow.matches) { kalka.style.transition = 'transform 1.4s cubic-bezier(.16,1,.3,1)'; heroScroll(); setTimeout(function () { kalka.style.transition = ''; }, 1500); }
+    });
     prick(powder, DOTS.blossom, 'dust', .5, .4, 0, function () { dustReady = true; });
   }
 
@@ -106,12 +132,15 @@
     var p = span > 0 ? clamp(-r.top / span, 0, 1) : 0;
     if (p > .02 && finishPrick) { finishPrick(); finishPrick = null; }
     var lift = smooth(.06, .6, p);
+    if (pricked && narrow.matches) lift = Math.max(lift, .17);
+    kalka.style.setProperty('--curl', Math.min(1, .35 + lift * 2.2).toFixed(2));
     kalka.style.transform = 'translate(' + (lift * 12) + '%,' + (-lift * 112) + '%) rotate(' + (lift * 7) + 'deg)';
     kalka.style.opacity = String(1 - smooth(.45, .62, p) * .9);
     if (dustReady) powder.style.opacity = String(Math.min(1, lift * 1.5) * (1 - smooth(.72, .98, p) * .8));
     var ph = p < .2 ? 0 : p < .62 ? 1 : 2;
     if (ph !== lastPhase) {
       phases.forEach(function (li, i) { li.classList.toggle('on', i === ph); });
+      if (cap) cap.innerHTML = narrow.matches ? phases[ph].innerHTML : capHTML;
       lastPhase = ph;
     }
     if (hbar) hbar.style.transform = 'scaleX(' + p.toFixed(3) + ')';
