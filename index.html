@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YANINA Couture — дом высокой моды Юлии Яниной</title>
+<meta name="description" content="Дом высокой моды Юлии Яниной: ручная вышивка, платья на заказ, официальный календарь Недели высокой моды в Париже.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#E6E9EA">
+<link rel="preload" href="fonts/oldstandardtt-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/onest-400-normal-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-blossom.webp" fetchpriority="high">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232335C4'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23E6E9EA' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="hd" id="top">
+  <a class="hd-mark" href="#top" aria-label="YANINA Couture, наверх">YANINA<small>COUTURE</small></a>
+  <nav class="hd-nav" aria-label="Разделы">
+    <a href="#atelier">Как шьём</a>
+    <a href="#collection">Коллекция</a>
+    <a href="#worn">Кто носит</a>
+    <a href="#house">Дом</a>
+  </nav>
+  <a class="btn btn-s" href="#order">Заказать платье</a>
+</header>
+
+<main>
+
+<!-- 1. Калька над лифом Apple Blossom -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-stage">
+    <div class="hero-copy">
+      <h1 id="h1" class="mark">YANINA<span>COUTURE</span></h1>
+      <p class="lead">Дом высокой моды Юлии Яниной. Платья вышивают вручную в&nbsp;Москве и&nbsp;показывают в&nbsp;Париже, в&nbsp;официальном календаре Недели высокой моды.</p>
+      <div class="cta">
+        <a class="btn" href="#order">Заказать платье</a>
+        <a class="lnk" href="#collection">Коллекция осень–зима 2026/27<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M17 1l5 4-5 4"/></svg></a>
+      </div>
+      <ol class="phase" aria-live="polite">
+        <li class="on">На кальке — рисунок вышивки. Его прокалывают иглой, точку за точкой.</li>
+        <li>Через проколы проходит синий порошок, и&nbsp;рисунок ложится на&nbsp;ткань.</li>
+        <li>По нему вышивают цветы яблони: пайетки, бисер, шёлк. На&nbsp;этот лиф ушло 414&nbsp;часов.</li>
+      </ol>
+    </div>
+
+    <figure class="sheet">
+      <img class="sheet-photo" src="img/hero-blossom.webp" width="1400" height="1845" alt="Лиф платья Apple Blossom YANINA Couture: цветы яблони, вышитые пайетками и бисером на телесном тюле, серый бант на талии" fetchpriority="high" decoding="async">
+      <canvas class="powder" id="powder" aria-hidden="true"></canvas>
+      <div class="kalka" id="kalka" aria-hidden="true">
+        <canvas id="holes"></canvas>
+        <span class="reg reg-tl"></span><span class="reg reg-tr"></span><span class="reg reg-bl"></span><span class="reg reg-br"></span>
+        <span class="kalka-tag">Калька · Apple Blossom</span>
+      </div>
+      <figcaption class="sheet-cap"><i>Apple Blossom</i> · ручная вышивка · 414 часов</figcaption>
+    </figure>
+    <div class="hero-bar" aria-hidden="true"><span id="hbar"></span></div>
+  </div>
+</section>
+
+<!-- 2. Как шьём -->
+<section class="atelier" id="atelier" aria-labelledby="h-atelier">
+  <div class="at-head">
+    <h2 id="h-atelier">Как рождается платье</h2>
+    <p>В московском ателье дома работают восемьдесят мастеров, из&nbsp;них двадцать четыре — вышивальщицы. Платье проходит через их руки в&nbsp;одном и&nbsp;том&nbsp;же порядке, от&nbsp;карандаша до&nbsp;красной дорожки.</p>
+  </div>
+
+  <div class="step step-sketch">
+    <div class="step-n" aria-hidden="true">1</div>
+    <div class="step-t">
+      <h3>Эскиз</h3>
+      <p>Юлия Янина рисует модели от&nbsp;руки. На&nbsp;полях эскиза остаются номер модели и&nbsp;рабочие пометки для&nbsp;мастеров. С&nbsp;такого листа начинается каждая коллекция, и&nbsp;с&nbsp;него&nbsp;же дом сделал приглашения на&nbsp;показ осень–зима 2026/27.</p>
+    </div>
+    <figure class="ph ph-sketch"><img src="img/sketch.webp" width="720" height="948" loading="lazy" decoding="async" alt="Карандашный эскиз Юлии Яниной с рукописными пометками на полях, приглашение на показ осень–зима 2026–2027"></figure>
+    <figure class="ph ph-sketch2"><img src="img/sketch2.webp" width="720" height="959" loading="lazy" decoding="async" alt="Второй эскиз коллекции с номером выхода 48-02 и логотипом YANINA Couture"></figure>
+  </div>
+
+  <div class="trio" id="trio">
+    <div class="trio-head">
+      <div class="step-n" aria-hidden="true">2–4</div>
+      <h3>Калька, порошок, игла</h3>
+      <p>Так в&nbsp;кутюрном цеху переносят рисунок вышивки на&nbsp;ткань. Ниже один и&nbsp;тот&nbsp;же узор, колосья пшеницы, на&nbsp;трёх стадиях. Точки сняты с&nbsp;настоящего платья дома.</p>
+    </div>
+    <figure class="layer layer-kalka">
+      <canvas data-dots="wheat" data-style="holes" aria-hidden="true"></canvas>
+      <figcaption><b>Калька.</b> Контур узора прокалывают иглой с&nbsp;ровным шагом.</figcaption>
+    </figure>
+    <figure class="layer layer-velvet">
+      <canvas data-dots="wheat" data-style="powder" aria-hidden="true"></canvas>
+      <figcaption><b>Припорох.</b> Калька ложится на&nbsp;бархат, через проколы проходит порошок.</figcaption>
+    </figure>
+    <figure class="layer layer-photo">
+      <img src="img/wheat-close.webp" width="1100" height="1467" loading="lazy" decoding="async" alt="Мини-платье из чёрного бархата с вышивкой золотыми колосьями пшеницы, вид вблизи на показе">
+      <figcaption><b>Вышивка.</b> Золотые колосья на&nbsp;чёрном бархате. Цех вышивки ведёт Светлана Евстигнеева, она в&nbsp;доме больше двадцати пяти лет.</figcaption>
+    </figure>
+  </div>
+
+  <div class="pair">
+    <div class="pstep">
+      <div class="pstep-h"><span class="step-n" aria-hidden="true">5</span><h3>Одна примерка</h3></div>
+      <p>Клиентка приходит один раз — на&nbsp;примерку «сырого» платья, ещё без&nbsp;отделки. Всё остальное ателье доводит без&nbsp;неё: не&nbsp;нужно возвращаться на&nbsp;пять примерок, чтобы получить вещь по&nbsp;фигуре.</p>
+      <figure class="ph"><img src="img/velvet.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Модель в бархатном пальто с вышивкой и розовом шёлковом платье на тёмно-зелёном фоне"></figure>
+    </div>
+    <div class="pstep">
+      <div class="pstep-h"><span class="step-n" aria-hidden="true">6</span><h3>Выход</h3></div>
+      <p>Сун Цзя получает награду за&nbsp;лучшую женскую роль на&nbsp;Flying Apsaras Awards 2026. На&nbsp;ней смокинг YANINA Couture, вышитый вручную целиком.</p>
+      <figure class="ph"><img src="img/songjia.webp" width="1000" height="1327" loading="lazy" decoding="async" alt="Актриса Сун Цзя в чёрном смокинге YANINA Couture с ручной вышивкой и юбке с перьями"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Коллекция -->
+<section class="coll" id="collection" aria-labelledby="h-coll">
+  <div class="coll-head">
+    <h2 id="h-coll">Осень–зима 2026/27</h2>
+    <p>Героини Бальзака, Мопассана и&nbsp;Золя. Корсеты, шёлковые ленты, тонкое кружево и&nbsp;бельё Прекрасной эпохи: мир, который прятали от&nbsp;чужих глаз и&nbsp;которым всегда тайно любовались.</p>
+    <div class="coll-nav">
+      <button class="arr" id="prev" type="button" aria-label="Предыдущие выходы"><svg viewBox="0 0 24 10" aria-hidden="true"><path d="M24 5H2M7 1 2 5l5 4"/></svg></button>
+      <span class="count" id="count" aria-live="polite">1 / 9</span>
+      <button class="arr" id="next" type="button" aria-label="Следующие выходы"><svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M17 1l5 4-5 4"/></svg></button>
+    </div>
+  </div>
+  <div class="rail" id="rail" tabindex="0" aria-label="Выходы коллекции осень–зима 2026/27, прокручиваются вбок">
+    <figure class="look look-w"><img src="img/vit-lace.webp" width="1100" height="1466" loading="lazy" decoding="async" alt="Модель в витрине: кружевное платье с юбкой из рюшей цвета карамели"><figcaption>Кружево и&nbsp;рюши цвета карамели. Съёмка в&nbsp;витрине</figcaption></figure>
+    <figure class="look"><img src="img/lace-run.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Выход на показе: чёрное кружевное платье с объёмной юбкой из тюля"><figcaption>То&nbsp;же платье на&nbsp;подиуме в&nbsp;Париже</figcaption></figure>
+    <figure class="look"><img src="img/lace-close.webp" width="1000" height="1331" loading="lazy" decoding="async" alt="Кружевной лиф с глубоким вырезом крупным планом"><figcaption>Лиф: кружево поверх телесного тюля</figcaption></figure>
+    <figure class="look look-w"><img src="img/vit-green.webp" width="1100" height="1466" loading="lazy" decoding="async" alt="Модель в витрине: серый бархатный жакет с цветочной вышивкой и бриджи"><figcaption>Бархатный жакет с&nbsp;цветочной вышивкой</figcaption></figure>
+    <figure class="look"><img src="img/pink-run.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Выход на показе: бархатное пальто с вышитыми ветками поверх розового шёлка"><figcaption>Бархат возвращается в&nbsp;верхнюю одежду</figcaption></figure>
+    <figure class="look"><img src="img/ribbon-run.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Выход: чёрное платье с шёлковыми лентами"><figcaption>Шёлковые ленты</figcaption></figure>
+    <figure class="look"><img src="img/fairy.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Платье Fairy: светлое платье из многослойных лепестков с крыльями"><figcaption>Платье «Fairy»</figcaption></figure>
+    <figure class="look"><img src="img/lace-run2.webp" width="1000" height="1326" loading="lazy" decoding="async" alt="Выход на показе: кружевное платье, вид в полный рост"><figcaption>Финал показа</figcaption></figure>
+    <figure class="look look-w"><img src="img/velvet-face.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Портрет модели в бархатном жакете с вышивкой и розовом шёлке"><figcaption>Бархат и&nbsp;розовый шёлк</figcaption></figure>
+  </div>
+</section>
+
+<!-- 4. Кто носит -->
+<section class="worn" id="worn" aria-labelledby="h-worn">
+  <h2 id="h-worn">Кто носит YANINA</h2>
+  <div class="quilt">
+    <figure class="q q-barbara"><img src="img/barbara.webp" width="1100" height="1449" loading="lazy" decoding="async" alt="Барбара Мирьян в платье Apple Blossom у Эйфелевой башни"><figcaption><b>Барбара Мирьян</b> в&nbsp;платье Apple Blossom для&nbsp;HOLA! Haute Couture. Вышивка заняла 414&nbsp;часов</figcaption></figure>
+    <figure class="q q-ning"><img src="img/ningning.webp" width="1000" height="1000" loading="lazy" decoding="async" alt="Нинин из группы aespa в чёрном платье YANINA с крыльями"><figcaption><b>Нинин, aespa,</b> в&nbsp;день рождения: чёрное платье с&nbsp;крыльями из&nbsp;коллекции осень–зима 2026/27</figcaption></figure>
+    <div class="q q-text">
+      <p class="q-big"><b>Дженнифер Лопес</b> — платья YANINA на&nbsp;обложке альбома «This Is Me…&nbsp;Now», 2024</p>
+      <p>Платья дома выходили на&nbsp;«Оскар», «Грэмми» и&nbsp;Каннский фестиваль. Их&nbsp;носили Джиджи Хадид, Гвен Стефани, Эмили Блант, Коко Роша.</p>
+    </div>
+    <figure class="q q-gala"><img src="img/gala.webp" width="640" height="1136" loading="lazy" decoding="async" alt="Юлия и Дарья Янины с Евой Лонгорией и Марией Браво на Global Gift Gala в Монако"><figcaption><b>Ева Лонгория</b> с&nbsp;Юлией и&nbsp;Дарьей Яниными на&nbsp;Global Gift Gala в&nbsp;Монако. Дом поддерживает фонд пятнадцать лет</figcaption></figure>
+    <figure class="q q-apple"><img src="img/apple-run.webp" width="1000" height="1317" loading="lazy" decoding="async" alt="Платье Apple Blossom на подиуме: пышная юбка из тюля с вышитыми цветами"><figcaption><b>Apple Blossom</b> на&nbsp;подиуме</figcaption></figure>
+  </div>
+</section>
+
+<!-- 5. Дом -->
+<section class="house" id="house" aria-labelledby="h-house">
+  <div class="house-l">
+    <h2 id="h-house">Семейный дом</h2>
+    <figure class="ph ph-family"><img src="img/family.webp" width="1000" height="1333" loading="lazy" decoding="async" alt="Юлия и Дарья Янины в нарядах YANINA Couture перед Vogue Arabia Ball 2026"><figcaption>Юлия и&nbsp;Дарья Янины перед Vogue Arabia Ball, 2026. Обе в&nbsp;YANINA Couture</figcaption></figure>
+    <blockquote class="quote"><p>«Кутюр для&nbsp;меня — это сказка».</p><footer>Юлия Янина</footer></blockquote>
+  </div>
+  <ol class="tl" id="tl">
+    <li><b>1989</b><p>В&nbsp;Саратове открывается ателье «Юля». В&nbsp;нём четыре человека, и&nbsp;попасть к&nbsp;Юлии можно только по&nbsp;рекомендации.</p></li>
+    <li><b>1993</b><p>Основан модный дом YANINA.</p></li>
+    <li><b>Москва</b><p>Переезд с&nbsp;мужем Евгением и&nbsp;дочерью Дашей. Юлия руководит Домом моды на&nbsp;Арбате, затем открывает свои салоны.</p></li>
+    <li><b>2007</b><p>Первый международный кутюрный показ — на&nbsp;AltaRoma AltaModa в&nbsp;Риме.</p></li>
+    <li><b>2010</b><p>Дом начинает показывать коллекции в&nbsp;Париже, в&nbsp;дни Недели высокой моды.</p></li>
+    <li><b>2013</b><p>Дарья Янина возглавляет международные проекты дома.</p></li>
+    <li><b>2020</b><p>Юлия — первый российский дизайнер на&nbsp;ужине amfAR.</p></li>
+    <li><b>2021</b><p>Федерация высокой моды принимает дом гостевым членом Недели высокой моды.</p></li>
+    <li><b>2022</b><p>27&nbsp;января — первый показ YANINA в&nbsp;официальном календаре Парижа.</p></li>
+    <li><b>2026</b><p>Коллекция осень–зима 2026/27 в&nbsp;Париже. Дому тридцать три года.</p></li>
+  </ol>
+</section>
+
+<!-- 6. Заказ -->
+<section class="order" id="order" aria-labelledby="h-order">
+  <div class="order-l">
+    <h2 id="h-order">Заказать платье</h2>
+    <p>Свадьба, красная дорожка, вечер, ради которого шьют одно платье на&nbsp;всю жизнь. Расскажите, что за&nbsp;событие и&nbsp;когда оно будет, и&nbsp;дом свяжется с&nbsp;вами, чтобы назначить примерку.</p>
+    <ul class="contacts">
+      <li><span>Заказы кутюр</span><a href="tel:+33621890343">+33 6 21 89 03 43</a></li>
+      <li><span>WhatsApp</span><a href="https://wa.me/33621890343" rel="noopener">Написать в&nbsp;WhatsApp</a></li>
+      <li><span>Почта</span><a href="mailto:info@yaninacouture.com">info@yaninacouture.com</a></li>
+    </ul>
+  </div>
+  <form class="form" id="form" novalidate>
+    <div class="form-holes" aria-hidden="true"></div>
+    <label class="f"><span>Как к вам обращаться</span><input name="name" autocomplete="name" required></label>
+    <label class="f"><span>Телефон или Telegram</span><input name="contact" autocomplete="tel" required></label>
+    <fieldset class="f f-opts">
+      <legend>Повод</legend>
+      <label><input type="radio" name="occasion" value="Свадьба" checked><span>Свадьба</span></label>
+      <label><input type="radio" name="occasion" value="Красная дорожка"><span>Красная дорожка</span></label>
+      <label><input type="radio" name="occasion" value="Вечер"><span>Вечер</span></label>
+      <label><input type="radio" name="occasion" value="Другое"><span>Другое</span></label>
+    </fieldset>
+    <div class="f-row">
+      <label class="f"><span>Когда нужно платье</span><input name="when" placeholder="например, июнь 2027"></label>
+      <fieldset class="f f-opts f-city">
+        <legend>Примерка</legend>
+        <label><input type="radio" name="city" value="Москва" checked><span>Москва</span></label>
+        <label><input type="radio" name="city" value="Париж"><span>Париж</span></label>
+      </fieldset>
+    </div>
+    <p class="f-err" id="ferr" role="alert"></p>
+    <button class="btn btn-dark" type="submit">Отправить заявку</button>
+    <p class="f-note">Заявка откроется письмом на&nbsp;info@yaninacouture.com в&nbsp;вашей почте.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="ft">
+  <a class="hd-mark ft-mark" href="#top">YANINA<small>COUTURE</small></a>
+  <ul class="ft-links">
+    <li><a href="https://www.instagram.com/yaninacouture/" rel="noopener">@yaninacouture</a></li>
+    <li><a href="https://www.instagram.com/yanina.yulia/" rel="noopener">@yanina.yulia</a></li>
+    <li><a href="https://www.youtube.com/@Yanina.Yulia1" rel="noopener">YouTube</a></li>
+  </ul>
+  <p class="ft-note">Концепт сайта, не&nbsp;официальный сайт дома. Фотографии из&nbsp;публикаций @yaninacouture. Узор проколов построен по&nbsp;контурам вышивки на&nbsp;этих фотографиях.</p>
+</footer>
+
+<script src="dots.js"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>
